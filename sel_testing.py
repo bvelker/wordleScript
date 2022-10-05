@@ -82,7 +82,6 @@ def solve_wordle(guess):
 
     # last_shadow2 = css_shadow_diver(driver, ["game-app", "#board"])
 
-    print()
     if driver.find_element(By.TAG_NAME, "body").is_displayed() and driver.find_element(By.TAG_NAME, "body").is_enabled():
         # raise Exception("stop")
         driver.find_element(By.TAG_NAME, "body").click()
@@ -225,7 +224,7 @@ if __name__ == "__main__":
 
     client = slack.WebClient(token=os.environ['SLACK_TOKEN'])
 
-    #client.chat_postMessage(channel='#wordlewars', text=a)
+    client.chat_postMessage(channel='#wordlewars', text=a)
 
     """
     time.sleep(3)
